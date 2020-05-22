@@ -24,12 +24,10 @@ class RadioListQuestion(Question):
 
     @staticmethod
     def is_this_question(tree):
-        xpath = """.//content[@role='presentation']/div[not(@class='freebirdMaterialScalecontentContainer')]"""
+        xpath = """.//content[@role='presentation']
+                   /div[not(@class='freebirdMaterialScalecontentContainer')]"""
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath) or utils.has_freebird_div(tree, "RadioOption"))
 
     def answer(self, option_name):
         self._answer = option_name
