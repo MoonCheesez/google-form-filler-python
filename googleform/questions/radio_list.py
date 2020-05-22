@@ -24,8 +24,7 @@ class RadioListQuestion(Question):
 
     @staticmethod
     def is_this_question(tree):
-        xpath = """.//content[@role='presentation']
-                   /div[not(@class='freebirdMaterialScalecontentContainer')]"""
+        xpath = """.//content[@role='presentation']/div[not(@class='freebirdMaterialScalecontentContainer')]"""
 
         if tree.xpath(xpath):
             return True
