@@ -22,15 +22,12 @@ def create_question(tree):
         if QuestionType.is_this_question(tree):
             return QuestionType(tree)
 
-    else:
-        raise ValueError(f"could figure question type of:\n\n{etree.tostring(tree, pretty_print=True).decode()}")
-
 
 def get_questions(tree):
     xpath = ".//div[@class='freebirdFormviewerViewNumberedItemContainer']"
     elements = tree.xpath(xpath)
-
-    return utils.eval_map(create_question, elements)
+    questions = utils.eval_map(create_question, elements)
+    return list(filter(lambda x: x is not None, questions))
 
 
 def create_payload(questions):
