@@ -22,12 +22,12 @@ def get_response_url(tree):
 
 def get_form_title(tree):
     xpath = ".//div[contains(@class, 'freebirdFormviewerViewHeaderTitle ')]"
-    return tree.xpath(xpath)[0].text
+    return tree.xpath(xpath)[0].text.rstrip()
 
 
 def get_form_description(tree):
     xpath = ".//div[@class='freebirdFormviewerViewHeaderDescription']"
-    return tree.xpath(xpath)[0].text
+    return tree.xpath(xpath)[0].text.rstrip()
 
 
 class GoogleForm:
