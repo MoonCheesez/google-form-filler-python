@@ -1,6 +1,6 @@
 import importlib
 from googleform import utils
-
+from lxml import etree
 
 QUESTION_TYPES = [
     "googleform.questions.checkbox",
@@ -21,6 +21,9 @@ def create_question(tree):
 
         if QuestionType.is_this_question(tree):
             return QuestionType(tree)
+
+    else:
+        raise ValueError(f"could figure question type of:\n\n{etree.tostring(tree, pretty_print=True).decode()}")
 
 
 def get_questions(tree):
