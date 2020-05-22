@@ -3,8 +3,8 @@ from googleform import utils
 
 
 def get_options(tree):
-    xpath = (".//div[contains(@class, "
-             "'freebirdThemedSelectOptionDarkerDisabled')]//content")
+    xpath = ".//div[contains(@class, 'freebirdThemedSelectOptionDarkerDisabled')]//content " \
+            "| .//div[contains(@class, 'freebirdThemedSelectOptionDarkerDisabled')]//span"
 
     # Ignore the first element, it is the "unselected" option
     option_elements = tree.xpath(xpath)[1:]
