@@ -18,7 +18,7 @@ def get_question_title(question_tree):
 def get_question_desc(question_tree):
     elements = utils.xpath_freebird_div(question_tree, "ItemItemHelpText")
 
-    desc = elements[0].text if elements else ""
+    desc = elements[0].text if elements else None
     return desc.rstrip() if desc else desc
 
 
