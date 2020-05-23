@@ -34,11 +34,7 @@ def get_question_id(question_tree):
 
 def get_is_required(question_tree):
     xpath = ".//span[@class='freebirdFormviewerViewItemsItemRequiredAsterisk']"
-
-    if question_tree.xpath(xpath):
-        return True
-    else:
-        return False
+    return bool(question_tree.xpath(xpath))
 
 
 class Question(abc.ABC):

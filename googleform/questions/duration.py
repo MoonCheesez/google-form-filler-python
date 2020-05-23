@@ -21,10 +21,7 @@ class DurationQuestion(Question):
             )]
         )]"""
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath))
 
     def answer(self, hours, minutes, seconds):
         self.hours = hours

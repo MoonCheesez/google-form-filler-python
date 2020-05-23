@@ -24,10 +24,7 @@ class DropdownQuestion(Question):
         xpath = (".//div[contains(@class,"
                  "'freebirdFormviewerViewItemsSelectSelect')]")
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath))
 
     def answer(self, option_name):
         self._answer = option_name

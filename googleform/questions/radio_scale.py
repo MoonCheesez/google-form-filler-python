@@ -19,10 +19,7 @@ class RadioScaleQuestion(Question):
     def is_this_question(tree):
         xpath = ".//div[@class='freebirdMaterialScalecontentContainer']"
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath))
 
     def answer(self, option_number):
         self._answer = option_number
