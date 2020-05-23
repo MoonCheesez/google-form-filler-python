@@ -1,5 +1,6 @@
 import importlib
 from googleform import utils
+from googleform.questions.unknown import UnknownQuestion
 from lxml import etree
 
 QUESTION_TYPES = [
@@ -22,12 +23,13 @@ def create_question(tree):
         if QuestionType.is_this_question(tree):
             return QuestionType(tree)
 
+    return UnknownQuestion(tree)
+
 
 def get_questions(tree):
     xpath = ".//div[@class='freebirdFormviewerViewNumberedItemContainer']"
     elements = tree.xpath(xpath)
-    questions = utils.eval_map(create_question, elements)
-    return list(filter(lambda x: x is not None, questions))
+    return utils.eval_map(create_question, elements)
 
 
 def create_payload(questions):
