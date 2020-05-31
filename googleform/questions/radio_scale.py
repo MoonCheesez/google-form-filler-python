@@ -25,8 +25,11 @@ class RadioScaleQuestion(Question):
         self._answer = option_number
 
     def serialize(self):
+        # Radio scale questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         return {
-            self.id: self._answer,
+            entry_id: self._answer,
         }
 
 

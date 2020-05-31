@@ -7,13 +7,15 @@ import googleform
 
 @pytest.fixture(scope='function')
 def test_form() -> googleform.GoogleForm:
+    return None
     return googleform.get('https://docs.google.com/forms/d/e/1FAIpQLScubyZo07YYHuDT_J1yWEnp8awE260r78Dyu3SS2w18XCglCw/viewform')
 
 
 def test_multipage(test_form: googleform.GoogleForm):
     """
-    Test with a real live multi page form,
-    so we can catch change happening to the structure and name of classes
+    Test with a live multi-page form
+    This test is to ensure that changes in form structure can be detected
+    (e.g. change in class names).
     """
 
     print(test_form.title)
@@ -36,6 +38,9 @@ def test_multipage(test_form: googleform.GoogleForm):
     next_page = next_page.next()
     print(next_page.title)
     for q in next_page.questions:
+        if isinstance(q, googleform.UnknownQuestion):
+            continue
+
         print(q.title)
         q.answer("ישראל פרוכטר")
     next_page.submit()

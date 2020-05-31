@@ -45,12 +45,14 @@ class CheckboxQuestion(Question):
 
     def serialize(self):
         checked_options = [x for x in self.checked if self.checked[x]]
+        # Checkbox questions should only have one entry id
+        entry_id = self.entry_ids[0]
         serialized_payload = {
-            self.id: checked_options,
+            entry_id: checked_options,
         }
 
         if self.checked.get("__other_option__") is not None:
-            other_option_key = self.id + ".other_option_response"
+            other_option_key = entry_id + ".other_option_response"
             serialized_payload[other_option_key] = self._other_answer
 
         return serialized_payload

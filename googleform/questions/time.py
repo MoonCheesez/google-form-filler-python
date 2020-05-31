@@ -26,9 +26,12 @@ class TimeQuestion(Question):
         self.minute = minute
 
     def serialize(self):
+        # Time questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         return {
-            "{}_hour".format(self.id): self.hour,
-            "{}_minute".format(self.id): self.minute,
+            "{}_hour".format(entry_id): self.hour,
+            "{}_minute".format(entry_id): self.minute,
         }
 
 

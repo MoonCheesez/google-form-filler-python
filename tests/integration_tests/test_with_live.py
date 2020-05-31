@@ -13,13 +13,22 @@ def test_integration(test_form: googleform.GoogleForm):
     Test with a real live form,
     so we can catch change happening to the structure and name of classes
     """
-    assert test_form.title == "Testing"
-    assert test_form.description == "This form is a test"
-    assert [q.id for q in test_form.questions] == ['entry.1743417152',
-                                                   'entry.2006249624',
-                                                   'entry.849154821',
-                                                   'entry.1929660606',
-                                                   'entry.540883615']
+    form_info = {
+        "title": "Testing",
+        "description": "This form is a test",
+        "entry_ids": [
+            'entry.1743417152',
+            'entry.2006249624',
+            'entry.849154821',
+            'entry.1929660606',
+            'entry.540883615',
+        ],
+    }
+
+    assert test_form.title == form_info["title"]
+    assert test_form.description == form_info["description"]
+    assert [q.entry_ids[0] for q in test_form.questions] == \
+        form_info["entry_ids"]
 
     for q in test_form.questions:
         print(q.id)

@@ -37,12 +37,15 @@ class RadioListQuestion(Question):
         self._other_answer = other_answer
 
     def serialize(self):
+        # Radio list questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         serialized_payload = {
-            self.id: self._answer,
+            entry_id: self._answer,
         }
 
         if self._answer == "__other_option__":
-            other_option_key = self.id + ".other_option_response"
+            other_option_key = entry_id + ".other_option_response"
             serialized_payload[other_option_key] = self._other_answer
 
         return serialized_payload

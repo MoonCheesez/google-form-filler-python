@@ -101,6 +101,11 @@ class TestQuestion:
             question_obj = working_question(question["tree"])
             assert question_obj.id == question["id"]
 
+    def test_get_entry_ids(self, working_question, all_questions):
+        for question in all_questions:
+            question_obj = working_question(question["tree"])
+            assert question_obj.entry_ids == question["entry_ids"]
+
     def test_is_required(self, working_question, all_questions):
         for question in all_questions:
             question_obj = working_question(question["tree"])

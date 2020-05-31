@@ -40,17 +40,19 @@ class DateQuestion(Question):
             self.minute = minute
 
     def serialize(self):
+        # Date questions should only have one entry id
+        entry_id = self.entry_ids[0]
         serialized = {
-            "{}_day".format(self.id): self.day,
-            "{}_month".format(self.id): self.month,
+            "{}_day".format(entry_id): self.day,
+            "{}_month".format(entry_id): self.month,
         }
 
         if self.has_year:
-            serialized["{}_year".format(self.id)] = self.year
+            serialized["{}_year".format(entry_id)] = self.year
 
         if self.has_time:
-            serialized["{}_hour".format(self.id)] = self.hour
-            serialized["{}_minute".format(self.id)] = self.minute
+            serialized["{}_hour".format(entry_id)] = self.hour
+            serialized["{}_minute".format(entry_id)] = self.minute
 
         return serialized
 
