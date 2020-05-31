@@ -19,19 +19,19 @@ class TimeQuestion(Question):
         )]
         """
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath))
 
     def answer(self, hour, minute):
         self.hour = hour
         self.minute = minute
 
     def serialize(self):
+        # Time questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         return {
-            "{}_hour".format(self.id): self.hour,
-            "{}_minute".format(self.id): self.minute,
+            "{}_hour".format(entry_id): self.hour,
+            "{}_minute".format(entry_id): self.minute,
         }
 
 

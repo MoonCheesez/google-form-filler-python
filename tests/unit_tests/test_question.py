@@ -9,8 +9,8 @@ def test_get_questions(form_tree, form_info):
 
 def test_create_payload_combines_question_serialization():
     class MyQuestion(Question):
-        def __init__(self, id, answer):
-            self.id = id
+        def __init__(self, entry_id, answer):
+            self.entry_id = entry_id
             self._answer = answer
 
         @staticmethod
@@ -19,7 +19,7 @@ def test_create_payload_combines_question_serialization():
 
         def serialize(self):
             return {
-                self.id: self._answer
+                self.entry_id: self._answer
             }
 
     questions = [MyQuestion("entry.1", "abc"), MyQuestion("entry.2", "cba")]

@@ -1,18 +1,20 @@
 {
     "radio_list.html": {
-        "id": "entry.667291757",
-        "title": "MCQ test",
+        "id": "2135632173",
+        "entry_ids": ["entry.1312905171"],
+        "title": "Multiple Choice",
         "description": null,
         "is_required": false,
         "options": [
-            "option 1",
-            "option 2",
-            "option 3"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ],
         "has_other_option": false
     },
     "checkbox.html": {
-        "id": "entry.920031234",
+        "id": "1851942855",
+        "entry_ids": ["entry.920031234"],
         "title": "Checkbox test",
         "description": "ASdlsj alksdj asd",
         "is_required": false,
@@ -24,8 +26,9 @@
         "has_other_option": false
     },
     "dropdown.html": {
-        "id": "entry.400999235",
-        "title": "Dropdown test",
+        "id": "932189592",
+        "entry_ids": ["entry.1394903027"],
+        "title": "Dropdown",
         "description": null,
         "is_required": false,
         "options": [
@@ -35,7 +38,8 @@
         ]
     },
     "radio_scale.html": {
-        "id": "entry.385313745",
+        "id": "498750018",
+        "entry_ids": ["entry.385313745"],
         "title": "Linear scale test",
         "description": null,
         "is_required": false,
@@ -43,19 +47,22 @@
         "options": [1, 2, 3, 4, 5]
     },
     "short_text.html": {
-        "id": "entry.1729905360",
+        "id": "639226105",
+        "entry_ids": ["entry.1729905360"],
         "title": "short test",
         "description": null,
         "is_required": false
     },
     "long_text.html": {
-        "id": "entry.1329600529",
+        "id": "2109384738",
+        "entry_ids": ["entry.1329600529"],
         "title": "paragraph test",
         "description": null,
         "is_required": false
     },
     "date.html": {
-        "id": "entry.103117748",
+        "id": "1629239337",
+        "entry_ids": ["entry.103117748"],
         "title": "Just date question",
         "description": null,
         "is_required": false,
@@ -63,7 +70,8 @@
         "has_time": false
     },
     "date_year.html": {
-        "id": "entry.1715854838",
+        "id": "71584861",
+        "entry_ids": ["entry.1715854838"],
         "title": "Date with year question",
         "description": "It only has a year, nothing else",
         "is_required": false,
@@ -71,7 +79,8 @@
         "has_time": false
     },
     "date_time.html": {
-        "id": "entry.1600643197",
+        "id": "582427949",
+        "entry_ids": ["entry.1600643197"],
         "title": "Date only with time question",
         "description": "Just read the title",
         "is_required": false,
@@ -79,7 +88,8 @@
         "has_time": true
     },
     "date_year_time.html": {
-        "id": "entry.1618323999",
+        "id": "1449493407",
+        "entry_ids": ["entry.1618323999"],
         "title": "Some date question",
         "description": null,
         "is_required": false,
@@ -87,52 +97,60 @@
         "has_time": true
     },
     "duration.html": {
-        "id": "entry.763346886",
+        "id": "364592488",
+        "entry_ids": ["entry.763346886"],
         "title": "Some duration question",
         "description": null,
         "is_required": false
     },
     "time.html": {
-        "id": "entry.1029615683",
+        "id": "1758985688",
+        "entry_ids": ["entry.1029615683"],
         "title": "Some time question",
         "description": null,
         "is_required": false
     },
     "required_radio_list.html": {
-        "id": "entry.1888466218",
-        "title": "Required MCQ question",
+        "id": "1059708268",
+        "entry_ids": ["entry.1701821051"],
+        "title": "Multiple Choice (required)",
         "description": null,
         "is_required": true,
         "options": [
-            "The first option",
-            "And the second"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ],
         "has_other_option": false
     },
     "required_dropdown.html": {
-        "id": "entry.1888466218",
-        "title": "Required Dropdown question",
+        "id": "265233507",
+        "entry_ids": ["entry.103073737"],
+        "title": "Dropdown (required)",
         "description": null,
         "is_required": true,
         "options": [
-            "first option",
-            "And second",
-            "And the third"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ]
     },
     "other_radio_list.html": {
-        "id": "entry.1888466218",
-        "title": "MCQ with other option",
+        "id": "1597535141",
+        "entry_ids": ["entry.1302961410"],
+        "title": "Multiple Choice (with Other)",
         "description": null,
         "is_required": false,
         "options": [
-            "A selectable first option",
-            "A not so nice second option"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ],
         "has_other_option": true
     },
     "other_checkbox.html": {
-        "id": "entry.1888466218",
+        "id": "355737832",
+        "entry_ids": ["entry.1888466218"],
         "title": "checkboxes with other option",
         "description": "This one is harder, with an option called \"Other:\"",
         "is_required": false,

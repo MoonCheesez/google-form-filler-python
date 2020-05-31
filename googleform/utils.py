@@ -18,10 +18,7 @@ def xpath_freebird_div(tree, name, exact=False):
 
 def has_freebird_div(tree, name, exact=False):
     result = xpath_freebird_div(tree, name, exact=exact)
-    if result:
-        return True
-    else:
-        return False
+    return bool(result)
 
 
 def eval_map(f, iterable, as_tuple=False):

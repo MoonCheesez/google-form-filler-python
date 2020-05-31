@@ -21,10 +21,7 @@ class DurationQuestion(Question):
             )]
         )]"""
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath))
 
     def answer(self, hours, minutes, seconds):
         self.hours = hours
@@ -32,10 +29,13 @@ class DurationQuestion(Question):
         self.seconds = seconds
 
     def serialize(self):
+        # Duration questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         return {
-            "{}_hour".format(self.id): self.hours,
-            "{}_minute".format(self.id): self.minutes,
-            "{}_second".format(self.id): self.seconds,
+            "{}_hour".format(entry_id): self.hours,
+            "{}_minute".format(entry_id): self.minutes,
+            "{}_second".format(entry_id): self.seconds,
         }
 
 

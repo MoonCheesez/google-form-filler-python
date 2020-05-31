@@ -4,7 +4,7 @@ from googleform import utils
 
 def get_options(tree):
     xpath = (".//div[contains(@class, "
-             "'freebirdThemedSelectOptionDarkerDisabled')]//content")
+             "'freebirdThemedSelectOptionDarkerDisabled')]//span")
 
     # Ignore the first element, it is the "unselected" option
     option_elements = tree.xpath(xpath)[1:]
@@ -24,17 +24,17 @@ class DropdownQuestion(Question):
         xpath = (".//div[contains(@class,"
                  "'freebirdFormviewerViewItemsSelectSelect')]")
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath))
 
     def answer(self, option_name):
         self._answer = option_name
 
     def serialize(self):
+        # Dropdown questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         return {
-            self.id: self._answer
+            entry_id: self._answer
         }
 
 

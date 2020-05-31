@@ -22,12 +22,18 @@ def get_response_url(tree):
 
 def get_form_title(tree):
     xpath = ".//div[contains(@class, 'freebirdFormviewerViewHeaderTitle ')]"
-    return tree.xpath(xpath)[0].text
+    return tree.xpath(xpath)[0].text.rstrip()
 
 
 def get_form_description(tree):
     xpath = ".//div[@class='freebirdFormviewerViewHeaderDescription']"
-    return tree.xpath(xpath)[0].text
+    desc = tree.xpath(xpath)
+    return desc[0].text.rstrip() if desc else None
+
+
+def get_hidden_inputs(tree):
+    xpath = ".//input[@type='hidden']"
+    return {i.attrib['name']: i.attrib['value'] for i in tree.xpath(xpath) if 'value' in i.attrib}
 
 
 class GoogleForm:
@@ -40,10 +46,25 @@ class GoogleForm:
         self.response_url = get_response_url(tree)
         self.title = get_form_title(tree)
         self.description = get_form_description(tree)
+        self.hidden_inputs = get_hidden_inputs(tree)
 
     def submit(self):
         payload = question.create_payload(self.questions)
+        payload.update(**self.hidden_inputs)
         response = requests.post(self.response_url, data=payload)
 
         if response.status_code != 200:
             raise SubmitFormError(response.reason)
+
+    def next(self):
+        payload = question.create_payload(self.questions)
+        payload.update(**self.hidden_inputs)
+        payload['continue'] = '1'
+        response = requests.post(self.response_url, data=payload)
+
+        if response.status_code != 200:
+            raise SubmitFormError(response.reason)
+
+        # there a next page for the form
+        if 'freebirdFormviewerViewFormContentWrapper' in response.text:
+            return GoogleForm(html=response.text)

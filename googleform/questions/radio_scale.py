@@ -19,17 +19,17 @@ class RadioScaleQuestion(Question):
     def is_this_question(tree):
         xpath = ".//div[@class='freebirdMaterialScalecontentContainer']"
 
-        if tree.xpath(xpath):
-            return True
-        else:
-            return False
+        return bool(tree.xpath(xpath))
 
     def answer(self, option_number):
         self._answer = option_number
 
     def serialize(self):
+        # Radio scale questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         return {
-            self.id: self._answer,
+            entry_id: self._answer,
         }
 
 

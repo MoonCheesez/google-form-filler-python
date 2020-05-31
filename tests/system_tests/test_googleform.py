@@ -96,8 +96,8 @@ def test_question_has_other_option(form, question_info):
 
 
 def test_question_info(form, question_info):
-    for question in form.questions:
-        current_question_info = question_info[question.id]
+    for i, question in enumerate(form.questions):
+        current_question_info = question_info[i]
         assert question.title == current_question_info["title"]
         assert question.description == current_question_info["description"]
         assert question.is_required is current_question_info["is_required"]

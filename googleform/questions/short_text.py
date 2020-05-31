@@ -16,8 +16,11 @@ class ShortTextQuestion(Question):
         self._answer = text
 
     def serialize(self):
+        # Short text questions should only have one entry id
+        entry_id = self.entry_ids[0]
+
         return {
-            self.id: self._answer,
+            entry_id: self._answer,
         }
 
 

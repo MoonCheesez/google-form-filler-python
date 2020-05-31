@@ -119,7 +119,7 @@ def test_checkbox_serializes_other_option(checkbox_questions):
     for question in checkbox_questions:
         question_obj = CheckboxQuestion(question["tree"])
 
-        other_option_key = question_obj.id + ".other_option_response"
+        other_option_key = question_obj.entry_ids[0] + ".other_option_response"
 
         if not question_obj.has_other_option:
             serialized = question_obj.serialize()

@@ -1,115 +1,547 @@
-{
-    "entry.667291757": {
-        "title": "MCQ test",
+[
+    {
+        "title": "Short Answer",
         "description": null,
         "is_required": false,
-        "options": [
-            "option 1",
-            "option 2",
-            "option 3"
-        ],
-        "has_other_option": false
+        "type": "short_text",
+        "type_info": {
+            "entry_id": "entry.1482133011",
+            "validation": null
+        }
     },
-    "entry.920031234": {
-        "title": "Checkbox test",
-        "description": "ASdlsj alksdj asd",
-        "is_required": false,
-        "options": [
-            "Option 1",
-            "Option 2",
-            "Option 3"
-        ],
-        "has_other_option": false
-    },
-    "entry.400999235": {
-        "title": "Dropdown test",
-        "description": null,
-        "is_required": false,
-        "options": [
-            "Option 1",
-            "Option 2",
-            "Option 3"
-        ]
-    },
-    "entry.385313745": {
-        "title": "Linear scale test",
-        "description": null,
-        "is_required": false,
-        "scale": ["lowest", "highest"],
-        "options": [1, 2, 3, 4, 5]
-    },
-    "entry.1729905360": {
-        "title": "short test",
-        "description": null,
-        "is_required": false
-    },
-    "entry.1329600529": {
-        "title": "paragraph test",
-        "description": null,
-        "is_required": false
-    },
-    "entry.1618323999": {
-        "title": "Some date question",
-        "description": null,
-        "is_required": false,
-        "has_year": true,
-        "has_time": true
-    },
-    "entry.763346886": {
-        "title": "Some duration question",
-        "description": null,
-        "is_required": false
-    },
-    "entry.1029615683": {
-        "title": "Some time question",
-        "description": null,
-        "is_required": false
-    },
-    "entry.103117748": {
-        "title": "Just date question",
-        "description": null,
-        "is_required": false,
-        "has_year": false,
-        "has_time": false
-    },
-    "entry.1715854838": {
-        "title": "Date with year question",
-        "description": "It only has a year, nothing else",
-        "is_required": false,
-        "has_year": true,
-        "has_time": false
-    },
-    "entry.1600643197": {
-        "title": "Date only with time question",
-        "description": "Just read the title",
-        "is_required": false,
-        "has_year": false,
-        "has_time": true
-    },
-    "entry.1888466218": {
-        "title": "MCQ with other option",
-        "description": "This multiple choice question has an \"other\" option",
-        "is_required": false,
-        "options": [
-            "A selectable first option",
-            "A not so nice second option"
-        ],
-        "has_other_option": true
-    },
-    "entry.234130691": {
-        "title": "Required short answer question",
-        "description": null,
-        "is_required": true
-    },
-    "entry.527124531": {
-        "title": "Required checkboxes with other option",
+    {
+        "title": "Short Answer (required)",
         "description": null,
         "is_required": true,
-        "options": [
-            "Dogs",
-            "Cats",
-            "Creatures"
-        ],
-        "has_other_option": true
+        "type": "short_text",
+        "type_info": {
+            "entry_id": "entry.470431230",
+            "validation": null
+        }
+    },
+    {
+        "title": "Short Answer (with description)",
+        "description": "This is the description",
+        "is_required": false,
+        "type": "short_text",
+        "type_info": {
+            "entry_id": "entry.1238908126",
+            "validation": null
+        }
+    },
+    {
+        "title": "Short Answer (with response validation)",
+        "description": "Must be a number greater than 10.",
+        "is_required": false,
+        "type": "short_text",
+        "type_info": {
+            "entry_id": "entry.169174348",
+            "validation": {
+                "condition": {
+                    "type": "number",
+                    "greater_than": 10
+                },
+                "error_text": "This is the custom error text"
+            }
+        }
+    },
+    {
+        "title": "Long Answer",
+        "description": null,
+        "is_required": false,
+        "type": "long_text",
+        "type_info": {
+            "entry_id": "entry.438366716",
+            "validation": null
+        }
+    },
+    {
+        "title": "Long Answer (required)",
+        "description": null,
+        "is_required": true,
+        "type": "long_text",
+        "type_info": {
+            "entry_id": "entry.802543421",
+            "validation": null
+        }
+    },
+    {
+        "title": "Multiple Choice",
+        "description": null,
+        "is_required": false,
+        "type": "radio_list",
+        "type_info": {
+            "entry_id": "entry.1312905171",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Multiple Choice (required)",
+        "description": null,
+        "is_required": true,
+        "type": "radio_list",
+        "type_info": {
+            "entry_id": "entry.1701821051",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Multiple Choice (with Other)",
+        "description": null,
+        "is_required": false,
+        "type": "radio_list",
+        "type_info": {
+            "entry_id": "entry.1302961410",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": true,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Multiple Choice (with other and shuffled options)",
+        "description": null,
+        "is_required": false,
+        "type": "radio_list",
+        "type_info": {
+            "entry_id": "entry.670014461",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": true,
+            "shuffled": true
+        }
+    },
+    {
+        "title": "Checkbox",
+        "description": null,
+        "is_required": false,
+        "type": "checkbox",
+        "type_info": {
+            "entry_id": "entry.505780496",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Checkbox (required)",
+        "description": null,
+        "is_required": true,
+        "type": "checkbox",
+        "type_info": {
+            "entry_id": "entry.1819867615",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Checkbox (with Other)",
+        "description": null,
+        "is_required": false,
+        "type": "checkbox",
+        "type_info": {
+            "entry_id": "entry.1317245963",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": true,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Checkbox (with other and shuffled options)",
+        "description": null,
+        "is_required": false,
+        "type": "checkbox",
+        "type_info": {
+            "entry_id": "entry.86714158",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "has_other_option": true,
+            "shuffled": true
+        }
+    },
+    {
+        "title": "Dropdown",
+        "description": null,
+        "is_required": false,
+        "type": "dropdown",
+        "type_info": {
+            "entry_id": "entry.1394903027",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Dropdown (required)",
+        "description": null,
+        "is_required": true,
+        "type": "dropdown",
+        "type_info": {
+            "entry_id": "entry.103073737",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Dropdown (with shuffled options)",
+        "description": null,
+        "is_required": false,
+        "type": "dropdown",
+        "type_info": {
+            "entry_id": "entry.1786149878",
+            "options": [
+                "Option 1",
+                "Option 2",
+                "Option 3"
+            ],
+            "shuffled": true
+        }
+    },
+    {
+        "title": "Linear Scale",
+        "description": null,
+        "is_required": false,
+        "type": "radio_scale",
+        "type_info": {
+            "entry_id": "entry.68330511",
+            "labels": ["Lower label", "Higher label"],
+            "options": [1, 2, 3, 4, 5]
+        }
+    },
+    {
+        "title": "Linear Scale (required)",
+        "description": null,
+        "is_required": true,
+        "type": "radio_scale",
+        "type_info": {
+            "entry_id": "entry.1430489456",
+            "labels": ["Lower label", "Higher label"],
+            "options": [1, 2, 3, 4, 5]
+        }
+    },
+    {
+        "title": "Multiple Choice Grid",
+        "description": null,
+        "is_required": false,
+        "type": "radio_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.1742662533"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.1813681810"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.716454270"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Multiple Choice Grid (required)",
+        "description": null,
+        "is_required": true,
+        "type": "radio_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.2122839602"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.502319205"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.1214232424"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Multiple Choice Grid (with shuffled rows)",
+        "description": null,
+        "is_required": false,
+        "type": "radio_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.213351693"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.979241587"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.782383650"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": false,
+            "shuffled": true
+        }
+    },
+    {
+        "title": "Multiple Choice Grid (with one response per col)",
+        "description": null,
+        "is_required": true,
+        "type": "radio_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.720401460"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.564821155"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.524461520"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": true,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Checkbox Grid",
+        "description": null,
+        "is_required": false,
+        "type": "checkbox_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.555688909"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.245881188"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.496438884"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Checkbox Grid (required)",
+        "description": null,
+        "is_required": true,
+        "type": "checkbox_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.56966544"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.1890498704"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.391221473"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": false,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Checkbox Grid (with shuffled rows)",
+        "description": null,
+        "is_required": false,
+        "type": "checkbox_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.1971184173"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.922360592"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.441405496"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": false,
+            "shuffled": true
+        }
+    },
+    {
+        "title": "Checkbox Grid (with one response per col)",
+        "description": null,
+        "is_required": false,
+        "type": "checkbox_grid",
+        "type_info": {
+            "rows": [
+                {
+                    "name": "Row 1",
+                    "entry": "entry.1598886622"
+                },
+                {
+                    "name": "Row 2",
+                    "entry": "entry.1066279197"
+                },
+                {
+                    "name": "Row 3",
+                    "entry": "entry.1883635076"
+                }
+            ],
+            "columns": [
+                "Column 1",
+                "Column 2"
+            ],
+            "one_response_per_col": true,
+            "shuffled": false
+        }
+    },
+    {
+        "title": "Date",
+        "description": null,
+        "is_required": false,
+        "type": "date",
+        "type_info": {
+            "entry_id": "entry.1613256613",
+            "has_year": true,
+            "has_time": false
+        }
+    },
+    {
+        "title": "Date (required)",
+        "description": null,
+        "is_required": true,
+        "type": "date",
+        "type_info": {
+            "entry_id": "entry.168191017",
+            "has_year": true,
+            "has_time": false
+        }
+    },
+    {
+        "title": "Date and time",
+        "description": null,
+        "is_required": false,
+        "type": "date",
+        "type_info": {
+            "entry_id": "entry.996727200",
+            "has_year": true,
+            "has_time": true
+        }
+    },
+    {
+        "title": "Time",
+        "description": null,
+        "is_required": false,
+        "type": "time",
+        "type_info": {
+            "entry_id": "entry.1268235918"
+        }
+    },
+    {
+        "title": "Time (required)",
+        "description": null,
+        "is_required": true,
+        "type": "time",
+        "type_info": {
+            "entry_id": "entry.130613097"
+        }
+    },
+    {
+        "title": "Time (Duration)",
+        "description": null,
+        "is_required": false,
+        "type": "duration",
+        "type_info": {
+            "entry_id": "entry.264724890"
+        }
     }
-}
+]
