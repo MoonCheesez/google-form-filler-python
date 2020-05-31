@@ -1,14 +1,14 @@
 {
     "radio_list.html": {
-        "id": "986802962",
-        "entry_ids": ["entry.667291757"],
-        "title": "MCQ test",
+        "id": "2135632173",
+        "entry_ids": ["entry.1312905171"],
+        "title": "Multiple Choice",
         "description": null,
         "is_required": false,
         "options": [
-            "option 1",
-            "option 2",
-            "option 3"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ],
         "has_other_option": false
     },
@@ -111,14 +111,15 @@
         "is_required": false
     },
     "required_radio_list.html": {
-        "id": "355737832",
-        "entry_ids": ["entry.1888466218"],
-        "title": "Required MCQ question",
+        "id": "1059708268",
+        "entry_ids": ["entry.1701821051"],
+        "title": "Multiple Choice (required)",
         "description": null,
         "is_required": true,
         "options": [
-            "The first option",
-            "And the second"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ],
         "has_other_option": false
     },
@@ -135,14 +136,15 @@
         ]
     },
     "other_radio_list.html": {
-        "id": "355737832",
-        "entry_ids": ["entry.1888466218"],
-        "title": "MCQ with other option",
+        "id": "1597535141",
+        "entry_ids": ["entry.1302961410"],
+        "title": "Multiple Choice (with Other)",
         "description": null,
         "is_required": false,
         "options": [
-            "A selectable first option",
-            "A not so nice second option"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ],
         "has_other_option": true
     },

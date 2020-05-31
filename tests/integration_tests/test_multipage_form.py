@@ -7,7 +7,6 @@ import googleform
 
 @pytest.fixture(scope='function')
 def test_form() -> googleform.GoogleForm:
-    return None
     return googleform.get('https://docs.google.com/forms/d/e/1FAIpQLScubyZo07YYHuDT_J1yWEnp8awE260r78Dyu3SS2w18XCglCw/viewform')
 
 
