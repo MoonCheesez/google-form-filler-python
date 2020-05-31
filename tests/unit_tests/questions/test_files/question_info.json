@@ -26,9 +26,9 @@
         "has_other_option": false
     },
     "dropdown.html": {
-        "id": "1576705520",
-        "entry_ids": ["entry.400999235"],
-        "title": "Dropdown test",
+        "id": "932189592",
+        "entry_ids": ["entry.1394903027"],
+        "title": "Dropdown",
         "description": null,
         "is_required": false,
         "options": [
@@ -124,15 +124,15 @@
         "has_other_option": false
     },
     "required_dropdown.html": {
-        "id": "355737832",
-        "entry_ids": ["entry.1888466218"],
-        "title": "Required Dropdown question",
+        "id": "265233507",
+        "entry_ids": ["entry.103073737"],
+        "title": "Dropdown (required)",
         "description": null,
         "is_required": true,
         "options": [
-            "first option",
-            "And second",
-            "And the third"
+            "Option 1",
+            "Option 2",
+            "Option 3"
         ]
     },
     "other_radio_list.html": {
